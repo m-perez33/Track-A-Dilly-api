@@ -207,7 +207,7 @@ app.post('/addproject', (req,res)=>{
 
                   res.json(user)
                 })
-              .catch(err => res.status(400).json('error loading projects'))
+              .catch(err => res.status(400).json('error adding projects'))
 
 })
 
