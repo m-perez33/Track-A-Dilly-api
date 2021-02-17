@@ -203,6 +203,7 @@ app.post('/addproject', (req,res)=>{
                 percentstart: percentStart      
               })
               .where('email', '=', req.body.email)
+              .returning('*')
               .then(user => {
 
                   res.json(user)
