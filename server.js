@@ -188,6 +188,22 @@ app.post('/addproject', (req,res)=>{
 
     
    db.select('*').from('projects')
+              /*.insert({
+                projectname:projectName,
+                email:email,
+                assetinitial: assetInitial,
+                assetcurrent: assetCurrent,
+                date: date,
+                percentage: percentage,
+                assetpercentage: assetPercentage,
+                assetcompleted: assetCompleted,
+                startdate: startDate,
+                updateddate: updatedDate,
+                formatstarttime: formatStartTime,
+                percentstart: percentStart      
+              })*/
+              .where('email', '=', req.body.email)
+              .returning('*')
               .insert({
                 projectname:projectName,
                 email:email,
@@ -202,8 +218,6 @@ app.post('/addproject', (req,res)=>{
                 formatstarttime: formatStartTime,
                 percentstart: percentStart      
               })
-              .where('email', '=', req.body.email)
-              .returning('*')
               .then(user => {
 
                   res.json(user)
