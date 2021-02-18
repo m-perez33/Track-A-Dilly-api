@@ -190,11 +190,11 @@ app.post('/addproject', (req,res)=>{
    db.select('*').from('projects')
               .insert({
                 projectname:projectName,
-               /* email:email,
+                email:email,
                 assetinitial: assetInitial,
                 assetcurrent: assetCurrent,
                 date: date,
-                percentage: percentage,
+                /*  percentage: percentage,
                 assetpercentage: assetPercentage,
                 assetcompleted: assetCompleted,
                 startdate: startDate,
