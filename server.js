@@ -194,11 +194,11 @@ app.post('/addproject', (req,res)=>{
                 assetinitial: assetInitial,
                 assetcurrent: assetCurrent,
                 date: date,
-                /*  percentage: percentage,
+                percentage: percentage,
                 assetpercentage: assetPercentage,
                 assetcompleted: assetCompleted,
                 startdate: startDate,
-                updateddate: updatedDate,
+                /*updateddate: updatedDate,
                 formatstarttime: formatStartTime,
                 percentstart: percentStart     */ 
               })
