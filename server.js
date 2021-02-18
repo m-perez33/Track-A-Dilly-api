@@ -197,10 +197,10 @@ app.post('/addproject', (req,res)=>{
                 percentage: percentage,
                 assetpercentage: assetPercentage,
                 assetcompleted: assetCompleted,
-                //startdate: startDate,
-                /*updateddate: updatedDate,
+                startdate: startDate,
+                updateddate: updatedDate,
                 formatstarttime: formatStartTime,
-                percentstart: percentStart     */ 
+                percentstart: percentStart      
               })
               .where('email', '=', req.body.email)
              // .returning('*')
