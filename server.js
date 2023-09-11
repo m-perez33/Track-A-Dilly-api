@@ -8,11 +8,15 @@ const cors = require('cors');
 
 const knex = require('knex');
 
+
+
 const db = knex({
   client: 'pg',
   connection: {
      connectionString : process.env.DATABASE_URL,
-     ssl: true
+     ssl: {
+     rejectUnauthorized: false
+  }
   }
 })
 
@@ -101,7 +105,7 @@ app.post('/register', (req, res)=>{
             return trx('users')
               .returning('*')
               .insert({
-                email: loginEmail[0].email,
+                email: loginEmail[0],
                 name: name,
                 joined: new Date()
               })
