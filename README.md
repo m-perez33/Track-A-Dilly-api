@@ -8,8 +8,9 @@ Track-A-Dilly is a Full-Stack application crafted to offer a comprehensive overv
 - Utilizes Express.js and Knex.js for easy connectivity to PostrgeSQL database
 - Authentication and authorization for secure user access with bcrypt.js
 
+The api is connected to an external database. 
 
-
+You can clone and review the code here:
 
 ```bash
 git clone https://github.com/m-perez33/Track-A-Dilly-api.git
