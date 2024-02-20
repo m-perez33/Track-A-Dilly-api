@@ -32,7 +32,6 @@ app.get('/', (req, res)=>{
 })
 
 
-
 app.post('/signin', (req, res)=>{
 
 const {email, password } = req.body
@@ -78,7 +77,7 @@ app.post('/loadprojects', (req, res)=>{
 
 
 app.post('/register', (req, res)=>{
-//regiter new user
+//register new user
   const { email, name, password } = req.body;
 
   if(!email|| !name || !password){
@@ -89,11 +88,7 @@ app.post('/register', (req, res)=>{
  
   const hash = bcrypt.hashSync(password, salt);
 
- /*bcrypt.genSalt(10, function(err, salt) {
-          bcrypt.hash(password, salt, function(err, hash) {
-              // Store hash in your password DB.
-              		console.log(hash);
-          });*/
+ 
   db.transaction(trx =>{
           trx.insert({
             hash: hash,
